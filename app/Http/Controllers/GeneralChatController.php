@@ -80,7 +80,7 @@ class GeneralChatController
 
         $bot->reply("ဟုတ္ကဲ့ {$this->getGreetingInBurmese()}ေလး ပါ။");
         $bot->reply(ButtonTemplate::create('ကၽြန္ေတာ္ကေတာ့ UCSY Chatbot ပါ ခင္ဗ်။ ကြီးတို႔၊ မြီးတို႔ လိုအပ္တာေတြကို ကူညီဖို႔ အသင့္ပါဘဲ ခင္ဗ်ာ။ 😃')
-            ->addButton(ElementButton::create('📄 အခ်ိန္ဇယား')->url(' https://920b1e5e.ngrok.io/timetable')
+            ->addButton(ElementButton::create('📄 အခ်ိန္ဇယား')->url('https://ucsy-bot.herokuapp.com/timetable')
                 ->heightRatio(ElementButton::RATIO_TALL)
                 ->enableExtensions())
             ->addButton(ElementButton::create('🚀 Campus လမ္းညႊန္')->type('postback')->payload('campus_guide'))
