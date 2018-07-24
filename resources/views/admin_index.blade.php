@@ -8,15 +8,15 @@
     <title>Admin Panel</title>
 
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/bootstrap/bootstrap.min.css') }}">
     <!--===============================================================================================-->
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template-->
-    <link href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ secure_asset('css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template-->
-    <link href="{{ asset('css/sb/sb-admin.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/sb/sb-admin.min.css') }}" rel="stylesheet">
 
     {{-- Toastr --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
     <div class="card card-login mx-auto mt-5">
         <div class="card-header">Originating Message</div>
         <div class="card-body">
-            <form id="form-send-message" action="{{ route('originating.messages.send') }}">
+            <form id="form-send-message" action="/messages">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Choose audience</label>
                     <select name="audience" class="form-control">
@@ -47,12 +47,12 @@
 </div>
 
 <!--===============================================================================================-->
-<script src="{{ asset('js/jquery/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ secure_asset('js/jquery/jquery-3.2.1.min.js') }}"></script>
 <!--===============================================================================================-->
-<script src="{{ asset('js/popper.js') }}"></script>
-<script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
+<script src="{{ secure_asset('js/popper.js') }}"></script>
+<script src="{{ secure_asset('js/bootstrap/bootstrap.min.js') }}"></script>
 <!--===============================================================================================-->
-<script src="{{ asset('js/jquery-easing/jquery.easing.min.js') }}"></script>
+<script src="{{ secure_asset('js/jquery-easing/jquery.easing.min.js') }}"></script>
 
 {{-- Toastr --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
