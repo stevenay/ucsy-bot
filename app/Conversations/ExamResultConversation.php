@@ -14,8 +14,18 @@ use BotMan\BotMan\Messages\Incoming\Answer;
 use BotMan\Drivers\Facebook\Extensions\ButtonTemplate;
 use BotMan\Drivers\Facebook\Extensions\ElementButton;
 
+/**
+ * Class ExamResultConversation
+ * @package App\Conversations
+ *
+ * Conversation to handle Exam Result Questions
+ */
 class ExamResultConversation extends Conversation
 {
+    /**
+     * @var
+     * studentId
+     */
     protected $rollNo;
 
     public function askRollNo()
@@ -24,23 +34,26 @@ class ExamResultConversation extends Conversation
             // Save result
             $this->rollNo = getEnglishNumber($answer->getText());
 
-            // TODO Check with the database
-            if ($this->rollNo === "123") {
-                $this->say("ဟုိး!!! 👏👏👏");
-                $this->say("ေအာင္ပါတယ္။ ဂုဏ္ယူပါတယ္ဗ်။");
-
-            } else {
-                $this->say("ခံုနံပါတ္ကို ေအာင္စာရင္းထဲမွာ မေတြ႕ဘူးဗ်။");
-                $this->say("ခံုနံပါတ္ကိုရိုက္တာ မွားေနလား စစ္ၾကည့္ပါဦး။");
-                $this->say("ေၾကြးက်န္လည္း တခ်စ္စစ္ၾကည့္ပါဦး။");
-
-            }
-
+            $this->replyPassOrFail();
             $this->say(ButtonTemplate::create('ေနာက္ခံုနံပါတ္တစ္ခုရဲ႕ ေအာင္စာရင္းကို ထပ္ၾကည့္ဦးမယ္ဆိုရင္ ေအာက္က Exam Result ဆိုတဲ့ ခလုတ္ေလးကို ႏွိပ္လို႔ ရပါတယ္။')
                 ->addButton(ElementButton::create('🎓 Exam Result')->type('postback')->payload('exam result'))
             );
 
         });
+    }
+
+    private function replyPassOrFail()
+    {
+        // TODO Check with the database
+        if ($this->rollNo === "123") {
+            $this->say("ဟုိး!!! 👏👏👏");
+            $this->say("ေအာင္ပါတယ္။ ဂုဏ္ယူပါတယ္ဗ်။");
+
+        } else {
+            $this->say("ခံုနံပါတ္ကို ေအာင္စာရင္းထဲမွာ မေတြ႕ဘူးဗ်။");
+            $this->say("ခံုနံပါတ္ကိုရိုက္တာ မွားေနလား စစ္ၾကည့္ပါဦး။");
+            $this->say("ေၾကြးက်န္လည္း တခ်စ္စစ္ၾကည့္ပါဦး။");
+        }
     }
 
     /**

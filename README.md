@@ -1,25 +1,37 @@
-<p align="center"><img height="188" width="198" src="https://botman.io/img/botman.png"></p>
-<h1 align="center">BotMan Studio</h1>
+# UCSY Facebook Messenger Chatbot (Un-official)
 
-## About BotMan Studio
 
-While BotMan itself is framework agnostic, BotMan is also available as a bundle with the great [Laravel](https://laravel.com) PHP framework. This bundled version is called BotMan Studio and makes your chatbot development experience even better. By providing testing tools, an out of the box web driver implementation and additional tools like an enhanced CLI with driver installation, class generation and configuration support, it speeds up the development significantly.
+## Brief Introduction
+This is Sample UCSY Facebook Messenger Chatbot. On this chatbot, you can do
+- decide whether Student. 
+- look Timetable. 
+- search Exam Result
+- search Tutorial Date.
 
-## Documentation
+On top of that, this repo includes implementation for "Human Handover Protocol" implementation and sending "Originating Message" functions. 
 
-You can find the BotMan and BotMan Studio documentation at [http://botman.io](http://botman.io).
+I have integrated Natural Language Processing into this Chatbot. For both of these, I use "Wit.ai" services api which is supported by Facebook. The project is developed with BotMan Studio Framework and MySql database.
 
-## Support the development
-**Do you like this project? Support it by donating**
+## Technologies
+This project is simply built by Php Laravel Framework. The following are the techs that this project utilize:
+- Laravel
+- Botman
+- MySql
+- Wit.ai
 
-- PayPal: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=m%2epociot%40googlemail%2ecom&lc=CY&item_name=BotMan&no_note=0&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest)
-- Patreon: [Donate](https://www.patreon.com/botman)
+## Setting Up
+I recommend to read this article where I wrote details about the step by step of how to setup the **BotMan Chatbot**.
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within BotMan or BotMan Studio, please send an e-mail to Marcel Pociot at m.pociot@gmail.com. All security vulnerabilities will be promptly addressed.
+## Todo
+- Most business-logic code (currently most of the business logic code are written in pseudo mode)
+- Admin Panel Setup
+- Full-blown Database Setup
+- Zawgyi/Unicode Support (currently only support Zawgyi)
 
-## License
 
-BotMan is free software distributed under the terms of the MIT license.
+## Apology in Advanced
+This Chatbot is developed within 3 days. So it still has so many requirements. But I think it can served as a starting point for most of the curious developers at least.
 
+## Further questions
+Contact [Steve Nay](https://github.com/stevenay).

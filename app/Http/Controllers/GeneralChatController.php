@@ -6,6 +6,12 @@ use BotMan\BotMan\BotMan;
 use BotMan\Drivers\Facebook\Extensions\ButtonTemplate;
 use BotMan\Drivers\Facebook\Extensions\ElementButton;
 
+/**
+ * Class GeneralChatController
+ * @package App\Http\Controllers
+ *
+ * To handle General Chat Messages
+ */
 class GeneralChatController
 {
     public function handleIntroduction(BotMan $bot)

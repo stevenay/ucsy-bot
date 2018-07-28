@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Log;
 
 /**
  * Natural Language Generator Processing Unit
+ * working along with Wit.ai
  *
  * Class ResponseProcessor
  * @package App\Nlp

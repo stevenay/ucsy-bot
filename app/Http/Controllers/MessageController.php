@@ -7,6 +7,12 @@ use BotMan\Drivers\Facebook\FacebookDriver;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
+/**
+ * Class MessageController
+ * @package App\Http\Controllers
+ *
+ * To handle Originating Message from Admin Panel
+ */
 class MessageController extends Controller
 {
     public function sendMessage(Request $request)

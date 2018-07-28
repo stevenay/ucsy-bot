@@ -14,6 +14,12 @@ use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 use BotMan\BotMan\Messages\Outgoing\Question;
 use BotMan\BotMan\BotMan;
 
+/**
+ * Class StudentLogInConversation
+ * @package App\Conversations
+ *
+ * Conversation to handle first time Student messaging with ChatBot
+ */
 class StudentLogInConversation extends Conversation
 {
     protected $rollNo;

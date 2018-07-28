@@ -10,6 +10,12 @@ use BotMan\Drivers\Facebook\FacebookDriver;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 
+/**
+ * Class HumanHandoverProtocol
+ * @package App\Http\Controllers
+ *
+ * Custom implementation of HumanHandoverProtocol (Chat with Person)
+ */
 class HumanHandoverProtocol extends Controller
 {
     public function handleStopLiveChat ($bot, $fb_user_id = null)

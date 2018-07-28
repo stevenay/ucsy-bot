@@ -9,8 +9,19 @@ use BotMan\Drivers\Facebook\Extensions\ElementButton;
 use GuzzleHttp\Client;
 use SteveNay\MyanFont\MyanFont;
 
+/**
+ * Class FallbackController
+ * @package App\Http\Controllers
+ *
+ * To handle messages that are out of control of Rules
+ */
 class FallbackController extends Controller
 {
+    /**
+     * @param BotMan $bot (auto inject from Framework)
+     *
+     * Send messages to Wit.ai
+     */
     public function askToWit(BotMan $bot)
     {
         if (IsBotInStopState($bot))
@@ -57,8 +68,17 @@ class FallbackController extends Controller
         }
     }
 
+    /**
+     * @param $message
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * Make network call to Wit.ai
+     */
     public function callToWit($message)
     {
+        // convert message to uni first
+        // because wit.ai model is trained by Unicode Encoding
         if (MyanFont::fontDetect($message) === "zawgyi") {
             $message = MyanFont::zg2uni($message);
         }
@@ -88,6 +108,11 @@ class FallbackController extends Controller
         return $witResponse;
     }
 
+    /**
+     * @param BotMan $bot
+     *
+     * To handle the messages that Wit.ai also don't understand to resolve
+     */
     public function replyDontUnderstand(Botman $bot)
     {
         $bot->reply("ဝမ္းနည္းပါတယ္။ ကၽြန္ေတာ္ကေတာ့ မူၿကိုအဆင့္ဘဲ ရွိေသးလို႔ ကြီးတို႔၊ မြီးတို႔ ေျပာတာအကုန္ေတာ့ နားမလည္ေသးပါဘူးဗ်။");
