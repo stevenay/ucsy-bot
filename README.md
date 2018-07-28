@@ -18,9 +18,10 @@ This project is simply built by Php Laravel Framework. The following are the tec
 - Botman
 - MySql
 - Wit.ai
+- Add License Info
 
 ## Setting Up
-I recommend to read this article where I wrote details about the step by step of how to setup the **BotMan Chatbot**.
+I recommend to read [this article](https://medium.com/@naylinaung/lets-build-a-messenger-chatbot-with-php-botman-part-1-aa4d0c6f6a63) where I wrote details about the step by step of how to setup the **BotMan Chatbot**.
 
 
 ## Todo
